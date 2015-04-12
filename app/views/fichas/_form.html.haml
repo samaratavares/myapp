@@ -1,0 +1,19 @@
+= simple_form_for(@ficha) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :paciente
+    = f.association :medico
+    = f.input :altura
+    = f.input :imc
+    = f.input :classificacao , label: 'Classificaçao'
+    = f.input :riscos
+    = f.input :circunferencia
+    = f.input :pressao
+    = f.input :glicose
+    = f.input :batimentos
+    = f.input :dieta
+    = f.input :medicamentos
+
+  .form-actions
+    = f.submit 'Salvar'

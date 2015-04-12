@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @paciente.nome
+%p
+  %b Endereco:
+  = @paciente.endereco
+%p
+  %b Telefone:
+  = @paciente.telefone
+%p
+  %b Email:
+  = @paciente.email
+%p
+  %b Cpf:
+  = @paciente.cpf
+
+= link_to 'Edit', edit_paciente_path(@paciente)
+\|
+= link_to 'Back', pacientes_path

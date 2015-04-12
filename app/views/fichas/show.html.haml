@@ -1,0 +1,42 @@
+%p#notice= notice
+
+%p
+  %b Paciente:
+  = @ficha.paciente
+%p
+  %b Medico:
+  = @ficha.medico
+%p
+  %b Altura:
+  = @ficha.altura
+%p
+  %b Imc:
+  = @ficha.imc
+%p
+  %b Classificacao:
+  = @ficha.classificacao
+%p
+  %b Riscos:
+  = @ficha.riscos
+%p
+  %b Circunferencia:
+  = @ficha.circunferencia
+%p
+  %b Pressao:
+  = @ficha.pressao
+%p
+  %b Glicose:
+  = @ficha.glicose
+%p
+  %b Batimentos:
+  = @ficha.batimentos
+%p
+  %b Dieta:
+  = @ficha.dieta
+%p
+  %b Medicamentos:
+  = @ficha.medicamentos
+
+= link_to 'Edit', edit_ficha_path(@ficha)
+\|
+= link_to 'Back', fichas_path

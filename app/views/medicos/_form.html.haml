@@ -1,0 +1,12 @@
+= simple_form_for(@medico) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome
+    = f.input :endereco
+    = f.input :telefone
+    = f.input :email
+    = f.input :crm
+
+  .form-actions
+    = f.button :submit

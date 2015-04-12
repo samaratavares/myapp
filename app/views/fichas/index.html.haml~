@@ -1,0 +1,41 @@
+%h1 Listing fichas
+
+%table
+  %tr
+    %th Paciente
+    %th Medico
+    %th Altura
+    %th Imc
+    %th Classificacao
+    %th Riscos
+    %th Circunferencia
+    %th Pressao
+    %th Glicose
+    %th Batimentos
+    %th Dieta
+    %th Medicamentos
+    %th
+    %th
+    %th
+
+  - @fichas.each do |ficha|
+    %tr
+      %td= ficha.paciente
+      %td= ficha.medico
+      %td= ficha.altura
+      %td= ficha.imc
+      %td= ficha.classificacao
+      %td= ficha.riscos
+      %td= ficha.circunferencia
+      %td= ficha.pressao
+      %td= ficha.glicose
+      %td= ficha.batimentos
+      %td= ficha.dieta
+      %td= ficha.medicamentos
+      %td= link_to 'Show', ficha
+      %td= link_to 'Edit', edit_ficha_path(ficha)
+      %td= link_to 'Excluir', ficha, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ficha', new_ficha_path

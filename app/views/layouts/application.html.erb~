@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prova</title>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<%= stylesheet_link_tag :application %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id='wrapper'>
+	<div id='header-wrapper'>
+		<div id='header'>
+			<div id='logo'>
+				<h1>Clinica</h1>
+					
+			</div>
+			
+			
+			<div id="menu">
+		
+			<ul>
+				<li><%= link_to 'Home', home_index_path %></li>
+				<li><%= link_to 'Pacientes', pacientes_path %><li>
+				<li><%= link_to 'Medicos', medicos_path %></li>
+				<li><%= link_to 'Fichas', fichas_path %></li>
+			
+			</ul>
+			</div>
+
+			
+	
+
+		</div>
+		
+	</div>
+	
+
+ <div id='page'>
+<div id='page-bgtop'>
+<div id='page-bgbtm'>
+<%= yield %>
+<div style='clear: both;'> </div>
+</div>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>

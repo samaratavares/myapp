@@ -1,0 +1,30 @@
+%h1 Lista de Medicos
+
+%table
+  %tr
+    %th Nome
+    %th Endereco
+    %th Telefone
+    %th Email
+    %th Crm
+    %th
+    %th
+    %th
+
+  - @medicos.each do |medico|
+    %tr
+      %td= medico.nome
+      %td= medico.endereco
+      %td= medico.telefone
+      %td= medico.email
+      %td= medico.crm
+      %td= link_to 'Show', medico
+      %td= link_to 'Edit', edit_medico_path(medico)
+      %td= link_to 'Excluir', medico, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Medico', new_medico_path
+
+
+
